@@ -1,0 +1,2 @@
+turtlebot3_simulations/turtlebot3_fake:turtlebot3_simulations/turtlebot3_gazebo:turtlebot3_simulations/turtlebot3_simulations
+-DCATKIN_DEVEL_PREFIX=/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/devel -DCMAKE_INSTALL_PREFIX=/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/install -G Unix Makefiles
