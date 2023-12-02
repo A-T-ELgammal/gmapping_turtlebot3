@@ -1,0 +1,41 @@
+
+<launch>
+
+<!-- Robot pose -->
+  <arg name="x" default="0"/>
+  <arg name="y" default="0"/>
+  <arg name="z" default="0"/>
+  <arg name="roll" default="0"/>
+  <arg name="pitch" default="0"/>
+  <arg name="yaw" default="0"/>
+
+<!-- Launch other relevant files-->
+  <include file="$(find my_robot)/launch/robot_description.launch"/>
+<!--include gmapping package-->
+  
+
+  <!-- World File -->
+  <!-- <arg name="world_file" default="$(find my_robot)/worlds/cafe.world"/> -->
+  <arg name="world_file" default="/home/ahmed/projects/udacity/SLAM/gmapping_WS/src/my_robot/worlds/simple.world"/>
+
+<!-- rviz file -->
+  <arg name = "rviz_world" default = "$(find my_robot)/rivz/world.rviz"/>
+<!--launch Rviz-->
+  <node name = "rviz" pkg = "rviz" type = "rviz" args  = " -d $(arg rviz_world)" />
+
+<!-- Launch Gazebo World -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="use_sim_time" value="true"/>
+    <arg name="debug" value="false"/>
+    <arg name="gui" value="true" />
+    <arg name="world_name" value="$(arg world_file)"/>
+  </include>
+
+<!-- Find my robot Description-->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find my_robot)/urdf/my_robot.xacro'"/>
+
+<!-- Spawn My Robot -->
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" 
+        args="-urdf -param robot_description -model my_robot -x 0 -y 0 -z 0 -R 0 -P 0 -Y $(arg yaw)" respawn="false" output="screen"/>
+  
+</launch>
