@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/src"
+CMAKE_SOURCE_DIR = /home/ahmed/projects/udacity/SLAM/gmapping_WS/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/build"
+CMAKE_BINARY_DIR = /home/ahmed/projects/udacity/SLAM/gmapping_WS/build
 
 # Utility rule file for tests.
 
@@ -67,6 +67,6 @@ CMakeFiles/tests.dir/clean:
 .PHONY : CMakeFiles/tests.dir/clean
 
 CMakeFiles/tests.dir/depend:
-	cd "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/src" "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/src" "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/build" "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/build" "/home/ahmed/projects/udacity/SLAM & Mapping/gmapping_WS/build/CMakeFiles/tests.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/ahmed/projects/udacity/SLAM/gmapping_WS/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahmed/projects/udacity/SLAM/gmapping_WS/src /home/ahmed/projects/udacity/SLAM/gmapping_WS/src /home/ahmed/projects/udacity/SLAM/gmapping_WS/build /home/ahmed/projects/udacity/SLAM/gmapping_WS/build /home/ahmed/projects/udacity/SLAM/gmapping_WS/build/CMakeFiles/tests.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests.dir/depend
 
