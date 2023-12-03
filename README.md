@@ -28,6 +28,12 @@
     rosrun teleop_twist_keyboard teleop_twist_keyboard.py
     ```
 
+4. For save the output map, run the `teleop_twist_keyboard` node in another terminal:
+    ```bash
+    rosrun map_server map_saver -f <map_name> 
+   ```
+    that will generate the map.pgm and map,yaml files for the output map in the location refered in the terminal.
+
 ## Output Screenshots
 
 - **Gazebo World Output:**
